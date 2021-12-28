@@ -80,7 +80,6 @@ public class GeometryDashScript : MonoBehaviour
         }
     }
 
-    // Please not that this module cannot be tested in Unity! Please build it locally and run it in game to test it!
     private IEnumerator WaitForVideoClips()
     {
         yield return new WaitUntil(() => VideoLoader.clips != null);
@@ -1223,14 +1222,13 @@ public class GeometryDashScript : MonoBehaviour
         }
         else if (rando > 61 && rando < 66)
         {
-            Debug.LogFormat("[Geometry Dash #{0}] The chosen level is: PP", moduleId);
-            lvlname = "PP";
-            creators.Add("AmorAltra");
-            creators.Add("BoomKitty");
-            verifier = "AmorAltra";
+            Debug.LogFormat("[Geometry Dash #{0}] The chosen level is: Lights And Thunder", moduleId);
+            lvlname = "Lights And Thunder";
+            creators.Add("Lyod");
+            verifier = "Lyod";
             difficulty = "Easy Demon";
-            songname = "Peepee Song";
-            songmaker = "BoomKitty";
+            songname = "Electrodynamix";
+            songmaker = "Dj-Nate";
             Debug.LogFormat("[Geometry Dash #{0}] --------------------------------------------", moduleId);
             if (rando == 62)
             {
@@ -1241,30 +1239,30 @@ public class GeometryDashScript : MonoBehaviour
                 speed = true;
                 teleport = false;
                 transformC = false;
-                orbs = true;
-                pads = true;
+                orbs = false;
+                pads = false;
             }
             else if (rando == 63)
             {
                 player.clip = useInternal ? internalClips[63] : VideoLoader.clips[63];
                 aud.clip = audios[63];
-                coin = true;
-                mirror = false;
+                coin = false;
+                mirror = true;
                 speed = false;
                 teleport = false;
                 transformC = true;
                 orbs = true;
-                pads = true;
+                pads = false;
             }
             else if (rando == 64)
             {
                 player.clip = useInternal ? internalClips[64] : VideoLoader.clips[64];
                 aud.clip = audios[64];
-                coin = true;
+                coin = false;
                 mirror = false;
                 speed = true;
                 teleport = false;
-                transformC = false;
+                transformC = true;
                 orbs = true;
                 pads = true;
             }
@@ -1276,9 +1274,9 @@ public class GeometryDashScript : MonoBehaviour
                 mirror = false;
                 speed = true;
                 teleport = false;
-                transformC = true;
+                transformC = false;
                 orbs = true;
-                pads = false;
+                pads = true;
             }
         }
         else if (rando > 65 && rando < 70)
